@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Stem";
+  font-weight: 500;
+  src: url("./assets/fonts/Stem-Medium.otf");
+}
+@font-face {
+  font-family: "Stem";
+  font-weight: 400;
+  src: url("./assets/fonts/Stem-Regular.otf");
+}
+@font-face {
+  font-family: "Classico URW";
+  src: url("./assets/fonts/ClassicoURW-Reg.otf");
+}
+
+:root {
+  --body-color: #ffffff;
+  --card-color: #faf8f6;
+  --text-primary-color: #322f2a;
+  --text-secondary-color: #797670;
+  --primary-color: #c3a470;
+  --primary-light-color: #e1cb95;
+  --shadow-primary: 0px 4px 40px rgba(196, 164, 112, 0.49);
+}
+
+html,
+body {
+  @apply bg-body;
+}
+
+.max-w-container {
+  @apply max-w-[1440px] w-full mx-auto px-5 md:px-[4.375rem];
+}
+
+.h1 {
+  @apply font-display md:text-[45.38px] md:leading-[57.96px] text-3xl mb-5 font-normal;
+}
+
+.h2 {
+  @apply font-display md:text-[40px] md:leading-[51.08px] text-[28px] font-normal;
+}
+
+.btn-primary {
+  @apply py-[19px] px-5 rounded-[53px] bg-primary-light text-sm font-medium transition-shadow hover:shadow-primary;
+}
+
+.benefits-card {
+  @apply w-full xl:max-w-full max-w-[calc(50%-10px)] md:max-w-[304px] p-5 rounded-[10px] bg-white flex flex-col items-start md:flex-row md:items-center gap-5;
+  filter: drop-shadow(0px 10px 40px rgba(173, 168, 159, 0.3));
+}
+
+.our-services {
+  @apply h-[50px] px-5 bg-transparent rounded-[53px] border border-primary-light text-primary-light text-sm font-medium;
+}
+
+section[data-selected="adult"] .our-services[data-select-service="adult"],
+section[data-selected="young"] .our-services[data-select-service="young"] {
+  @apply bg-primary-light hover:shadow-primary transition-shadow text-white;
+}
+
+section[data-selected="adult"] > #young-accordions,
+section[data-selected="young"] > #adult-accordions {
+  @apply hidden;
+}
+
+.accordion-item > input:checked + label > i {
+  @apply rotate-90;
+}
+
+.accordion-item > input ~ .accordion-content {
+  @apply hidden;
+}
+
+.accordion-item > input:checked ~ .accordion-content {
+  @apply block;
+}
+
+.accordion-item {
+  @apply rounded-[55px];
+}
+
+.accordion-item:has(> input:checked) {
+  @apply rounded-[10px];
+}
+
+#specialists[data-selected="1"] button[data-select-specialist="1"],
+#specialists[data-selected="2"] button[data-select-specialist="2"],
+#specialists[data-selected="3"] button[data-select-specialist="3"] {
+  @apply border-primary-light;
+}
+
+#specialists[data-selected="1"]
+  > div:not([data-specialist="1"]):not(.select-cards),
+#specialists[data-selected="2"]
+  > div:not([data-specialist="2"]):not(.select-cards),
+#specialists[data-selected="3"]
+  > div:not([data-specialist="3"]):not(.select-cards) {
+  display: none !important;
+}
+
+ul:has(> .check-list-icon) {
+  @apply list-none p-0 flex flex-col gap-2.5;
+}
+
+.check-list-icon {
+  @apply flex gap-2.5 items-center;
+}
+
+.check-list-icon::before {
+  @apply inline-block min-w-[20px] h-5;
+  content: "";
+  mask-image: url("./assets/images/icons/check.svg");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+}
+
+.banner {
+  background: url("./assets/images/banner-bg.svg") no-repeat 100% 50%,
+    linear-gradient(95deg, #c6aa6a 6.33%, #e1cb95 100.49%);
+}
+
+@media (max-width: 1260px) {
+  .banner {
+    background: url("./assets/images/banner-bg-tablet.svg") no-repeat 100% 100%,
+      linear-gradient(95deg, #c6aa6a 6.33%, #e1cb95 100.49%);
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    background: linear-gradient(95deg, #c6aa6a 6.33%, #e1cb95 100.49%);
+  }
+}
+
+.sidebar {
+  @apply absolute top-[104px] transition-all md:h-[calc(100dvh-104px)] h-[calc(100dvh-78px)] left-0 z-20 w-full xl:hidden px-5 md:px-[70px];
+}
+
+.sidebar[data-closed="true"] {
+  @apply -translate-x-full opacity-0;
+}
+
+body:has(.sidebar[data-closed="false"]) {
+  @apply overflow-hidden;
+}
+
+.guarantee-pagination {
+  @apply mt-5;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-card opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-light;
+}
+
+.modal {
+  @apply hidden fixed z-[100] left-0 top-0 w-full h-full;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  @apply max-w-[750px] w-[calc(100%-40px)] md:w-[calc(100%-140px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[10px] overflow-hidden;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+#dialog[data-selected-step="1"] div[data-step="1"],
+#dialog[data-selected-step="2"] div[data-step="2"],
+#dialog[data-selected-step="3"] div[data-step="3"],
+#dialog[data-selected-step="4"] div[data-step="4"],
+#dialog[data-selected-step="5"] div[data-step="5"],
+#dialog[data-selected-step="6"] div[data-step="6"],
+#dialog[data-selected-step="7"] div[data-step="7"] {
+  display: block !important;
+}
+
+#short-dialog[data-selected-step="1"] div[data-step="1"],
+#short-dialog[data-selected-step="2"] div[data-step="2"] {
+  display: block !important;
+}
+
+.select-age input[type="radio"]:checked + label,
+.select-step-3 input[type="radio"]:checked + label,
+.select-step-4 input[type="radio"]:checked + label,
+.select-step-5 input[type="radio"]:checked + label {
+  @apply border-primary-light text-primary;
+}
+
+.select-bite input[type="radio"]:checked + label {
+  @apply border-primary-light;
+}
+
+.select-bite input[type="radio"]:checked + label > svg {
+  @apply text-primary;
+}
