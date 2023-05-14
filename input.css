@@ -162,11 +162,15 @@ body:has(.sidebar[data-closed="false"]) {
 
 .modal {
   @apply hidden fixed z-[100] left-0 top-0 w-full h-full;
+}
+
+.modal-bg {
+  @apply absolute inset-0 z-[100];
   backdrop-filter: blur(10px);
 }
 
 .modal-content {
-  @apply max-w-[750px] w-[calc(100%-40px)] md:w-[calc(100%-140px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[10px] overflow-hidden;
+  @apply max-w-[750px] w-[calc(100%-40px)] md:w-[calc(100%-140px)] z-[200] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[10px] overflow-hidden;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
 }
 

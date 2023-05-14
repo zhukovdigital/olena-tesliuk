@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body>
-    <header class="bg-white relative">
+    <header class="bg-white relative z-[1000]">
       <div class="max-w-container py-3.5 md:py-5 flex items-center">
         <a href="./index.html" class="inline-block w-auto h-auto mr-auto">
           <img
@@ -1371,6 +1371,7 @@
       </div>
     </footer>
     <div id="short-dialog" data-selected-step="1" class="modal">
+      <div class="modal-bg close-short-dialog"></div>
       <div class="modal-content">
         <div
           class="w-full min-h-[400px] h-auto rounded-[10px] bg-white relative px-[30px] py-10 md:p-[50px] !pb-[110px]"
@@ -1440,6 +1441,7 @@
       </div>
     </div>
     <div id="dialog" data-selected-step="1" class="modal">
+      <div class="modal-bg close-dialog"></div>
       <div class="modal-content">
         <div
           class="w-full min-h-[400px] h-auto rounded-[10px] bg-white relative px-[30px] py-10 md:p-[50px] !pb-[110px]"

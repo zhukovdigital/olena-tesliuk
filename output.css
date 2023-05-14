@@ -659,6 +659,10 @@ video {
   left: 1.25rem;
 }
 
+.left-\[-38px\] {
+  left: -38px;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -699,10 +703,6 @@ video {
   top: 1.25rem;
 }
 
-.left-\[-38px\] {
-  left: -38px;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -713,6 +713,10 @@ video {
 
 .z-10 {
   z-index: 10;
+}
+
+.z-\[1000\] {
+  z-index: 1000;
 }
 
 .float-right {
@@ -893,10 +897,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.ml-\[-38px\] {
-  margin-left: -38px;
 }
 
 .box-border {
@@ -3608,6 +3608,12 @@ body:has(.sidebar[data-closed="false"]) {
   display: none;
   height: 100%;
   width: 100%;
+}
+
+.modal-bg {
+  position: absolute;
+  inset: 0px;
+  z-index: 100;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -3616,6 +3622,7 @@ body:has(.sidebar[data-closed="false"]) {
   position: absolute;
   left: 50%;
   top: 50%;
+  z-index: 200;
   width: calc(100% - 40px);
   max-width: 750px;
   --tw-translate-x: -50%;
@@ -3808,10 +3815,6 @@ body:has(.sidebar[data-closed="false"]) {
     right: -101px;
   }
 
-  .md\:left-\[-38px\] {
-    left: -38px;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -3905,18 +3908,6 @@ body:has(.sidebar[data-closed="false"]) {
 
   .md\:mt-\[90px\] {
     margin-top: 90px;
-  }
-
-  .md\:mb-\[70px\] {
-    margin-bottom: 70px;
-  }
-
-  .md\:mt-\[40px\] {
-    margin-top: 40px;
-  }
-
-  .md\:ml-\[-38px\] {
-    margin-left: -38px;
   }
 
   .md\:block {
@@ -4110,10 +4101,6 @@ body:has(.sidebar[data-closed="false"]) {
     margin-bottom: calc(50px * var(--tw-space-y-reverse));
   }
 
-  .md\:overflow-auto {
-    overflow: auto;
-  }
-
   .md\:rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -4226,10 +4213,6 @@ body:has(.sidebar[data-closed="false"]) {
     padding-bottom: 97px;
   }
 
-  .md\:pr-10 {
-    padding-right: 2.5rem;
-  }
-
   .md\:pr-\[42px\] {
     padding-right: 42px;
   }
@@ -4272,10 +4255,6 @@ body:has(.sidebar[data-closed="false"]) {
 
   .md\:pt-\[60px\] {
     padding-top: 60px;
-  }
-
-  .md\:pr-5 {
-    padding-right: 1.25rem;
   }
 
   .md\:text-left {
