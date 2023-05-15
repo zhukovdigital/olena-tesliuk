@@ -3801,6 +3801,10 @@ body:has(.sidebar[data-closed="false"]) {
     bottom: 0.625rem;
   }
 
+  .md\:bottom-5 {
+    bottom: 1.25rem;
+  }
+
   .md\:bottom-\[-20px\] {
     bottom: -20px;
   }

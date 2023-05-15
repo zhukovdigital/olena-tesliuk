@@ -124,14 +124,14 @@
         <nav
           class="flex flex-col gap-[30px] md:mt-[76px] text-lg md:text-[30px]"
         >
-          <a href="./index.html#services">Послуги</a>
-          <a href="./index.html#about">Про нас</a>
-          <a href="./index.html#our-works">Наші роботи</a>
-          <a href="#prices">Ціни</a>
-          <a href="#specialists">Лікарі</a>
-          <a href="#feedback">Відгуки</a>
-          <a href="#certificates">Сертифікати</a>
-          <a href="#contact">Як нас знайти</a>
+          <a href="./index.html#services" class="close-sidebar">Послуги</a>
+          <a href="./index.html#about" class="close-sidebar">Про нас</a>
+          <a href="./index.html#our-works" class="close-sidebar">Наші роботи</a>
+          <a href="#prices" class="close-sidebar">Ціни</a>
+          <a href="#specialists" class="close-sidebar">Лікарі</a>
+          <a href="#feedback" class="close-sidebar">Відгуки</a>
+          <a href="#certificates" class="close-sidebar">Сертифікати</a>
+          <a href="#contact" class="close-sidebar">Як нас знайти</a>
         </nav>
         <a
           href="tel:+380509313763"
@@ -223,7 +223,9 @@
             </h1>
             <span class="max-w-[366px] inline-block text-sm md:text-lg mb-10">
               Запишіться на першу консультацію лікаря <s>за 400 грн</s>.
-              <strong>безкоштовно до кінця <span id="current-month"></span></strong>
+              <strong
+                >безкоштовно до кінця <span id="current-month"></span
+              ></strong>
             </span>
             <div
               class="flex gap-2.5 flex-col xl:flex-row max-w-[231px] xl:max-w-full"
@@ -2039,12 +2041,16 @@
                 placeholder="Імʼя"
                 name="name"
                 type="text"
+                title="Некоректний формат імʼя! Введіть імʼя у форматі Олена"
+                pattern="^[a-zA-Zа-яА-Я]+(([',. -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 required
               />
               <input
                 class="md:max-w-[240px] w-full block px-5 py-3.5 font-medium border rounded-[10px] border-card focus:border-primary-light outline-none text-base"
                 placeholder="Телефон"
                 name="tel"
+                title="Некоректний формат телефону! Введіть телефон у форматі 380969996633"
+                pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                 type="tel"
                 required
               />
@@ -2107,12 +2113,16 @@
                 placeholder="Імʼя"
                 name="name"
                 type="text"
+                title="Некоректний формат імʼя! Введіть імʼя у форматі Олена"
+                pattern="^[a-zA-Zа-яА-Я]+(([',. -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 required
               />
               <input
                 class="md:max-w-[240px] w-full block px-5 py-3.5 font-medium border rounded-[10px] border-card focus:border-primary-light outline-none text-base"
                 placeholder="Телефон"
                 name="tel"
+                title="Некоректний формат телефону! Введіть телефон у форматі 380969996633"
+                pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                 type="tel"
                 required
               />

@@ -105,6 +105,14 @@ document.querySelectorAll(".feedback-prev").forEach((element) => {
   });
 });
 
+document.querySelectorAll(".close-sidebar").forEach((element) => {
+  const sidebar = document.querySelector(".sidebar");
+
+  element.addEventListener("click", () => {
+    sidebar.dataset.closed = true;
+  });
+});
+
 document.querySelector(".hamburger").addEventListener("click", () => {
   const sidebar = document.querySelector(".sidebar");
 

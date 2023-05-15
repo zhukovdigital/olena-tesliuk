@@ -12,11 +12,11 @@ const submitShortForm = document.getElementById("submit-short-form");
 submitShortForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const data = new FormData(submitForm);
+  const data = new FormData(submitShortForm);
 
   try {
-    const userName = data.get("name");
-    const tel = data.get("tel");
+    const userName = data.get("name").trim();
+    const tel = data.get("tel").trim();
 
     await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
@@ -27,7 +27,7 @@ submitShortForm.addEventListener("submit", async (event) => {
         template_params: {
           from_name: userName,
           to_name: "zhukov.digital",
-          message: `Імʼя: ${userName}, Телефон: ${tel}`,
+          message: `Імʼя: ${userName}, Телефон: ${tel}, сайт: ${window.location.href}`,
         },
       }),
       headers: {
@@ -48,8 +48,8 @@ submitForm.addEventListener("submit", async (event) => {
   const data = new FormData(submitForm);
 
   try {
-    const userName = data.get("name");
-    const tel = data.get("tel");
+    const userName = data.get("name").trim();
+    const tel = data.get("tel").trim();
     const step1 = modal.querySelector(
       'div[data-step="1"] input[type="radio"]:checked'
     ).value;
