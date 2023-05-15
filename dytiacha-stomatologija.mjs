@@ -1,6 +1,7 @@
 const howMuchScheduledList = document.querySelectorAll(".how-much-scheduled");
 const howMuchAvailable = document.getElementById("how-much-available");
 const specialists = document.getElementById("specialists");
+const currentMonth = document.getElementById("current-month");
 const specialist1 = specialists.querySelector(
   'button[data-select-specialist="1"]'
 );
@@ -30,12 +31,29 @@ specialists.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const months = [
+    "січня",
+    "лютого",
+    "березня",
+    "квітня",
+    "травня",
+    "червня",
+    "липня",
+    "серпня",
+    "вересня",
+    "жовтня",
+    "листопада",
+    "грудня",
+  ];
+  const date = new Date();
   const rand = Math.floor(Math.random() * (20 - 10) + 10);
 
   for (const howMuchScheduled of howMuchScheduledList) {
     howMuchScheduled.innerText = `${rand} людей`;
     howMuchAvailable.innerText = 20 - rand;
   }
+
+  currentMonth.innerText = months[date.getMonth()];
 });
 
 new Swiper(".guarantee", {

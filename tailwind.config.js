@@ -25,6 +25,7 @@ module.exports = {
       },
       boxShadow: {
         primary: "var(--shadow-primary)",
+        white: "0px 4px 40px rgba(250, 248, 246, 0.8)",
       },
     },
   },

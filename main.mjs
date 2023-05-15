@@ -17,6 +17,7 @@ const adultButton = ourServicesSection.querySelector(
 const youngButton = ourServicesSection.querySelector(
   '.our-services[data-select-service="young"]'
 );
+const currentMonth = document.getElementById("current-month");
 
 ourServicesSection.addEventListener("click", (event) => {
   const selected = adultButton.contains(event.target)
@@ -49,12 +50,28 @@ specialists.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const months = [
+    "січня",
+    "лютого",
+    "березня",
+    "квітня",
+    "травня",
+    "червня",
+    "липня",
+    "серпня",
+    "вересня",
+    "жовтня",
+    "листопада",
+    "грудня",
+  ];
+  const date = new Date();
   const rand = Math.floor(Math.random() * (20 - 10) + 10);
 
   for (const howMuchScheduled of howMuchScheduledList) {
     howMuchScheduled.innerText = `${rand} людей`;
     howMuchAvailable.innerText = 20 - rand;
   }
+  currentMonth.innerText = months[date.getMonth()];
 });
 
 const swiperCarousel = new Swiper(".our-work-carousel", {
