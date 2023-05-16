@@ -1,7 +1,7 @@
 const howMuchScheduledList = document.querySelectorAll(".how-much-scheduled");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const rand = Math.floor(Math.random() * (20 - 10) + 10);
+  const rand = getRandomNumber();
 
   for (const howMuchScheduled of howMuchScheduledList) {
     howMuchScheduled.innerText = `${rand} людей`;
@@ -98,3 +98,14 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
   sidebar.dataset.closed = sidebar.dataset.closed === "true" ? false : true;
 });
+
+function getRandomNumber() {
+  const date = new Date();
+  const seed = +`${date.getFullYear()}${date.getMonth() + 1}-${date.getDate()}`
+    .split("")
+    .map((el) => el.charCodeAt())
+    .join("");
+  const random = Math.abs(Math.sin(seed) * 1000);
+  const randomNumber = Math.floor(random % 10) + 5;
+  return randomNumber;
+}

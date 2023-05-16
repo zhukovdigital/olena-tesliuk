@@ -4,10 +4,24 @@ const openElements = document.querySelectorAll(".open-dialog");
 const closeElements = document.querySelectorAll(".close-dialog");
 const openShortElements = document.querySelectorAll(".open-short-dialog");
 const closeShortElements = document.querySelectorAll(".close-short-dialog");
+const submitBtn = document.querySelectorAll('button[type="submit"]');
 const nextElements = document.querySelectorAll(".next-dialog");
 const prevElements = document.querySelectorAll(".prev-dialog");
 const submitForm = document.getElementById("submit-form");
 const submitShortForm = document.getElementById("submit-short-form");
+
+function addLoading() {
+  submitBtn.forEach((button) => {
+    button.innerHTML =
+      'Отримати консультацію<span class="spinner"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" fill="currentColor" /></svg></span>';
+  });
+}
+
+function removeLoading() {
+  submitBtn.forEach((button) => {
+    button.innerHTML = "Отримати консультацію";
+  });
+}
 
 submitShortForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -17,7 +31,7 @@ submitShortForm.addEventListener("submit", async (event) => {
   try {
     const userName = data.get("name").trim();
     const tel = data.get("tel").trim();
-
+    addLoading();
     await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       body: JSON.stringify({
@@ -38,6 +52,7 @@ submitShortForm.addEventListener("submit", async (event) => {
     console.error(e);
     window.location.reload();
   } finally {
+    removeLoading();
     shortModal.dataset.selectedStep = +shortModal.dataset.selectedStep + 1;
   }
 });
@@ -66,6 +81,7 @@ submitForm.addEventListener("submit", async (event) => {
       'div[data-step="5"] input[type="radio"]:checked'
     ).value;
 
+    addLoading();
     await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       body: JSON.stringify({
@@ -86,6 +102,7 @@ submitForm.addEventListener("submit", async (event) => {
     console.error(e);
     window.location.reload();
   } finally {
+    removeLoading();
     modal.dataset.selectedStep = +modal.dataset.selectedStep + 1;
   }
 });

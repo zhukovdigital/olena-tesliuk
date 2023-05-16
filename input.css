@@ -203,3 +203,15 @@ body:has(.sidebar[data-closed="false"]) {
 .select-bite input[type="radio"]:checked + label > svg {
   @apply text-primary;
 }
+
+button[type="submit"]:has(> .spinner) {
+  @apply text-primary-light;
+}
+
+.spinner {
+  @apply absolute left-1/2 top-1/2 block w-5 h-5 -translate-x-1/2 -translate-y-1/2;
+}
+
+.spinner > svg {
+  @apply animate-spin text-white;
+}
