@@ -10,6 +10,8 @@ const prevElements = document.querySelectorAll(".prev-dialog");
 const submitForm = document.getElementById("submit-form");
 const submitShortForm = document.getElementById("submit-short-form");
 
+let dialogLabel = "";
+
 function addLoading() {
   submitBtn.forEach((button) => {
     button.innerHTML =
@@ -41,7 +43,7 @@ submitShortForm.addEventListener("submit", async (event) => {
         template_params: {
           from_name: userName,
           to_name: "zhukov.digital",
-          message: `Імʼя: ${userName}, Телефон: ${tel}, сайт: ${window.location.href}`,
+          message: `Імʼя: ${userName}, Телефон: ${tel}, сайт: ${window.location.href}, призначення: ${dialogLabel}`,
         },
       }),
       headers: {
@@ -120,8 +122,9 @@ prevElements.forEach((element) => {
 });
 
 openShortElements.forEach((element) => {
-  element.addEventListener("click", () => {
+  element.addEventListener("click", (event) => {
     shortModal.style.display = "block";
+    dialogLabel = event.target.dataset.label;
   });
 });
 
@@ -148,6 +151,7 @@ closeElements.forEach((element) => {
 window.onclick = function (event) {
   if (event.target === shortModal) {
     shortModal.style.display = "none";
+    dialogLabel = "";
   }
 
   if (event.target == modal) {
