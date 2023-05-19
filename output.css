@@ -1082,6 +1082,10 @@ video {
   height: 1px;
 }
 
+.h-\[380px\] {
+  height: 380px;
+}
+
 .max-h-\[308px\] {
   max-height: 308px;
 }
@@ -2555,6 +2559,11 @@ video {
      object-position: left;
 }
 
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -2723,6 +2732,10 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .pt-5 {
@@ -4319,6 +4332,10 @@ button[type="submit"]:has(> .spinner) {
 
   .md\:pt-\[60px\] {
     padding-top: 60px;
+  }
+
+  .md\:pt-\[80px\] {
+    padding-top: 80px;
   }
 
   .md\:text-left {
