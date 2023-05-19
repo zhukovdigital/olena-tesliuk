@@ -2770,6 +2770,10 @@ video {
   padding-top: 9px;
 }
 
+.pb-\[34px\] {
+  padding-bottom: 34px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -4656,6 +4660,10 @@ button[type="submit"]:has(> .spinner) {
 
   .xl\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .xl\:pt-14 {
+    padding-top: 3.5rem;
   }
 
   .xl\:text-left {
