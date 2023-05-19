@@ -14,9 +14,6 @@ new Swiper(".guarantee", {
   pagination: {
     el: ".guarantee-pagination",
   },
-  zoom: {
-    maxRatio: 3,
-  },
   loop: true,
   breakpoints: {
     768: {
