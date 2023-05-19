@@ -14,9 +14,8 @@ new Swiper(".guarantee", {
   pagination: {
     el: ".guarantee-pagination",
   },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
+  zoom: {
+    maxRatio: 3,
   },
   loop: true,
   breakpoints: {
@@ -25,7 +24,6 @@ new Swiper(".guarantee", {
     },
     1025: {
       slidesPerView: 4,
-      enabled: false,
     },
   },
 });
