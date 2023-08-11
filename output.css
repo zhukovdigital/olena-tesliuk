@@ -4145,11 +4145,6 @@ button[type="submit"]:has(> .spinner) {
     padding: 50px;
   }
 
-  .md\:\!px-\[50px\] {
-    padding-left: 50px !important;
-    padding-right: 50px !important;
-  }
-
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
