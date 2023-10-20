@@ -1,4 +1,30 @@
 const howMuchScheduledList = document.querySelectorAll(".how-much-scheduled");
+const howMuchAvailable = document.getElementById("how-much-available");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const months = [
+    "січня",
+    "лютого",
+    "березня",
+    "квітня",
+    "травня",
+    "червня",
+    "липня",
+    "серпня",
+    "вересня",
+    "жовтня",
+    "листопада",
+    "грудня",
+  ];
+  const date = new Date();
+  const rand = getRandomNumber();
+
+  for (const howMuchScheduled of howMuchScheduledList) {
+    howMuchScheduled.innerText = `${rand} людей`;
+    howMuchAvailable.innerText = 16 - rand;
+  }
+  currentMonth.innerText = months[date.getMonth()];
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const rand = getRandomNumber();

@@ -55,7 +55,6 @@ submitShortForm.addEventListener("submit", async (event) => {
     window.location.reload();
   } finally {
     removeLoading();
-    submitShortForm.classList.add("form_submission");
     shortModal.dataset.selectedStep = +shortModal.dataset.selectedStep + 1;
   }
 });
@@ -106,7 +105,6 @@ submitForm.addEventListener("submit", async (event) => {
     window.location.reload();
   } finally {
     removeLoading();
-    submitForm.classList.add("form_submission");
     modal.dataset.selectedStep = +modal.dataset.selectedStep + 1;
   }
 });

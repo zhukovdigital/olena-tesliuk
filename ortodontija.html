@@ -14,8 +14,19 @@
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./output.css" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRLG5RXH');</script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRLG5RXH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="bg-white relative z-[1000]">
       <div class="max-w-container py-3.5 md:py-5 flex items-center">
         <a href="/" class="inline-block w-auto h-auto mr-auto">
@@ -667,6 +678,56 @@
           </div>
         </div>
       </section>
+      
+      <section class="pb-10 md:pb-[50px] max-w-container">
+        <div
+          class="bg-card rounded-[10px] p-[30px] items-stretch flex xl:flex-row flex-col"
+        >
+          <img
+            class="w-full mr-10 hidden md:block xl:max-w-[240px] h-[240px] object-cover object-left rounded-[10px] flex-grow"
+            loading="lazy"
+            src="./assets/images/banner2.jpg"
+            alt="banner"
+          />
+          <div class="flex md:flex-row flex-col items-stretch md:pt-5 xl:pt-0">
+            <div class="max-w-[436px] w-full md:pt-[25px]">
+              <div
+                class="w-auto px-[15px] h-[30px] inline-flex items-center justify-center bg-primary-light rounded-[10px]"
+              >
+                <span class="text-white text-sm font-medium">Акція</span>
+              </div>
+              <h4 class="mt-5 mb-[15px] text-2xl font-medium">
+                Металева брекет-система
+              </h4>
+              <p class="text-sm text-secondary-text">
+                Перевірені часом системи, що дозволяють швидко досягати позитивних результатів.
+              </p>
+            </div>
+            <div
+              class="h-px md:h-auto w-full md:w-px bg-primary-light mt-6 mb-5 md:my-0 md:ml-[24px] xl:ml-[70px] md:mr-[71px] xl:mr-[75px]"
+            ></div>
+            <div class="w-full text-center md:text-left">
+              <strong style="text-align: center;display: block;" class="text-primary text-[44px] font-medium"
+                >14 500 грн.
+                <s style="text-align: center;display: block;" class="text-sm font-normal text-secondary-text"
+                  >19 000 грн.</s></strong
+              >
+              <div class="text-sm text-center mt-[30px] mb-2.5">
+                Залишилось <span id="how-much-available">0</span> місць<br />
+                <span class="text-primary">цього місяця</span>
+              </div>
+              <div class="flex justify-center">
+                <button
+                  class="open-short-dialog btn-primary text-white"
+                  data-label="Головна - Акція, гігієна порожнини рота"
+                >
+                  Записатися на прийом
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         id="prices"
         class="max-w-container py-10 md:py-[50px] text-center"
@@ -685,8 +746,7 @@
                   позитивних результатів
                 </p>
                 <span class="text-lg text-primary font-medium"
-                  >від 12 500 грн</span
-                >
+                  ><s style="display: block;" class="text-sm font-normal text-secondary-text"> від 19 000 грн.</s> від 14 500 грн </span>
                 <picture>
                   <source
                     srcset="./assets/images/prices/mobile/1.png"
@@ -708,7 +768,7 @@
                   Це конструкції, що складаються із штучних кристалів сапфіру.
                 </p>
                 <span class="text-lg text-primary font-medium"
-                  >від 18 000 грн</span
+                  ><s style="display: block;" class="text-sm font-normal text-secondary-text"> від 20 500 грн.</s> від 19 000 грн</span
                 >
                 <picture>
                   <source
@@ -731,7 +791,7 @@
                   Це брекети, у якого замочки складаються з різних матеріалів
                 </p>
                 <span class="text-lg text-primary font-medium"
-                  >від 16 500 грн</span
+                  ><s style="display: block;" class="text-sm font-normal text-secondary-text"> від 19 500 грн.</s> від 17 500 грн</span
                 >
                 <picture>
                   <source
@@ -755,7 +815,7 @@
                   позитивних результатів
                 </p>
                 <span class="text-lg text-primary font-medium"
-                  >від 20 000 грн</span
+                  ><s style="display: block;" class="text-sm font-normal text-secondary-text"> від 22 000 грн.</s> від 20 000 грн</span
                 >
                 <picture>
                   <source
@@ -778,7 +838,7 @@
                   Це конструкції, що складаються із штучних кристалів сапфіру.
                 </p>
                 <span class="text-lg text-primary font-medium"
-                  >від 17 000 грн</span
+                  ><s style="display: block;" class="text-sm font-normal text-secondary-text"> від 20 000 грн.</s> від 19 000 грн</span
                 >
                 <picture>
                   <source
@@ -975,12 +1035,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
                     src="./assets/images/feedback/user-1.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Анна</span>
                     <span class="text-sm text-primary">29 років</span>
@@ -1015,12 +1075,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-2.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Максим</span>
                     <span class="text-sm text-primary">24 роки</span>
@@ -1052,12 +1112,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                    <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-3.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Олеся</span>
                     <span class="text-sm text-primary">22 роки</span>
@@ -1089,15 +1149,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-4.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Ангеліна</span>
-                    <span class="text-sm text-primary">28 років</span>
+                    <span class="font-display text-base">Марина</span>
+                    <span class="text-sm text-primary">27 років</span>
                   </div>
                 </div>
               </div>
@@ -1126,12 +1186,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-5.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Вікторія</span>
                     <span class="text-sm text-primary">24 роки</span>
@@ -1164,15 +1224,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-6.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Наталія</span>
-                    <span class="text-sm text-primary">32 роки</span>
+                    <span class="text-sm text-primary">24 роки</span>
                   </div>
                 </div>
               </div>
@@ -1202,15 +1262,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-7.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Оля Кулик</span>
-                    <span class="text-sm text-primary">34 роки</span>
+                    <span class="font-display text-base">Оля</span>
+                    <span class="text-sm text-primary">32 роки</span>
                   </div>
                 </div>
               </div>
@@ -1240,15 +1300,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-8.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Наталя</span>
-                    <span class="text-sm text-primary">27 років</span>
+                    <span class="font-display text-base">Ксенія</span>
+                    <span class="text-sm text-primary">20 років</span>
                   </div>
                 </div>
               </div>
@@ -1281,14 +1341,14 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-9.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Віта Олещук</span>
+                    <span class="font-display text-base">Віта</span>
                     <span class="text-sm text-primary">32 роки</span>
                   </div>
                 </div>

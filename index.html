@@ -14,8 +14,19 @@
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./output.css" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRLG5RXH');</script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRLG5RXH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="bg-card relative z-[1000]">
       <div class="max-w-container py-3.5 md:py-5 flex items-center">
         <a href="/" class="inline-block w-auto h-auto mr-auto">
@@ -768,16 +779,70 @@
         <h2 class="h2 mb-2.5 md:mb-[30px] mt-5 block text-center">
           Вигідні ціни на будь-які послуги
         </h2>
-        <div class="flex justify-center gap-2.5 items-stretch">
-          <button class="our-services" data-select-service="adult">
-            Дорослі
-          </button>
-          <button class="our-services" data-select-service="young">Діти</button>
-        </div>
         <div
           id="adult-accordions"
-          class="pt-[30px] md:pt-10 max-w-[1080px] mx-auto flex flex-wrap gap-y-2.5 gap-x-5 items-baseline"
+          class="max-w-[1080px] mx-auto flex flex-wrap gap-y-2.5 gap-x-5 items-baseline"
         >
+         <div
+            class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
+          >
+            <input type="checkbox" class="hidden" id="accordion-item-0" />
+            <label
+              class="w-full flex items-center justify-between cursor-pointer"
+              for="accordion-item-0"
+            >
+              <span class="text-lg font-medium">Профілактика</span>
+              <i
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.7998 8.00003C10.7998 8.1279 10.751 8.2559 10.6533 8.35353L5.65334 13.3535C5.45796 13.5489 5.14159 13.5489 4.94634 13.3535C4.75109 13.1582 4.75096 12.8418 4.94634 12.6465L9.59284 8.00003L4.94634 3.35353C4.75096 3.15815 4.75096 2.84178 4.94634 2.64653C5.14171 2.45128 5.45809 2.45115 5.65334 2.64653L10.6533 7.64653C10.751 7.74415 10.7998 7.87215 10.7998 8.00003Z"
+                    fill="white"
+                  />
+                </svg>
+              </i>
+            </label>
+            <div class="price py-5 space-y-2.5 pr-5 accordion-content">
+              <div class="flex items-end">
+                <span class="mr-2">Професійна гігієна +оптрагейт</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">1 100 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Фторування зубів</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">500 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Ортогігієна</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">600 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Дитяча гігієна сода</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">750 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Відбілювання</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">3 600 грн.</span>
+              </div>
+              <!--
+              <div class="flex items-end">
+                <span class="mr-2">Відбілювання 2-й етап</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">4 500 грн.</span>
+              </div> -->
+            </div>
+          </div>
           <div
             class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
           >
@@ -804,21 +869,38 @@
                 </svg>
               </i>
             </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
+            <div class="price py-5 space-y-2.5 pr-5 accordion-content">
               <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
+                <span class="mr-2">Анестезія інфільтраційна</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 100 грн.</span>
               </div>
               <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
+                <span class="mr-2">Реставрація бокових груп зубів</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 700 грн.</span>
               </div>
+              <div class="flex items-end">
+                <span class="mr-2">Реставрація фронтальних груп зубів</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 900 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Тимчасова пломба</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">200 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Скайс</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">700 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Видалення зуба мудрості</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">2 500 грн.</span>
+              </div>
+              
             </div>
           </div>
           <div
@@ -829,7 +911,7 @@
               class="w-full flex items-center justify-between cursor-pointer"
               for="accordion-item-2"
             >
-              <span class="text-lg font-medium">Гігієна порожнини рота</span>
+              <span class="text-lg font-medium">Дитяча терапія</span>
               <i
                 class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
               >
@@ -847,114 +929,35 @@
                 </svg>
               </i>
             </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
+            <div class="price py-5 space-y-2.5 pr-5 accordion-content">
               <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
+                <span class="mr-2">Видалення молочного зуба</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 200 грн.</span>
               </div>
               <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
-          >
-            <input type="checkbox" class="hidden" id="accordion-item-3" />
-            <label
-              class="w-full flex items-center justify-between cursor-pointer"
-              for="accordion-item-3"
-            >
-              <span class="text-lg font-medium">Хірургія</span>
-              <i
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.7998 8.00003C10.7998 8.1279 10.751 8.2559 10.6533 8.35353L5.65334 13.3535C5.45796 13.5489 5.14159 13.5489 4.94634 13.3535C4.75109 13.1582 4.75096 12.8418 4.94634 12.6465L9.59284 8.00003L4.94634 3.35353C4.75096 3.15815 4.75096 2.84178 4.94634 2.64653C5.14171 2.45128 5.45809 2.45115 5.65334 2.64653L10.6533 7.64653C10.751 7.74415 10.7998 7.87215 10.7998 8.00003Z"
-                    fill="white"
-                  />
-                </svg>
-              </i>
-            </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
-              <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
+                <span class="mr-2">Лікування карієсу зубів </span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 500 грн.</span>
               </div>
               <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
+                <span class="mr-2">Лікування карієсу зубів </span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 500 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Гігієна щіткою</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">400 грн.</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Герметизація фісур</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">500 грн.</span>
               </div>
             </div>
           </div>
-          <div
-            class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
-          >
-            <input type="checkbox" class="hidden" id="accordion-item-4" />
-            <label
-              class="w-full flex items-center justify-between cursor-pointer"
-              for="accordion-item-4"
-            >
-              <span class="text-lg font-medium">Ортодонтія</span>
-              <i
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.7998 8.00003C10.7998 8.1279 10.751 8.2559 10.6533 8.35353L5.65334 13.3535C5.45796 13.5489 5.14159 13.5489 4.94634 13.3535C4.75109 13.1582 4.75096 12.8418 4.94634 12.6465L9.59284 8.00003L4.94634 3.35353C4.75096 3.15815 4.75096 2.84178 4.94634 2.64653C5.14171 2.45128 5.45809 2.45115 5.65334 2.64653L10.6533 7.64653C10.751 7.74415 10.7998 7.87215 10.7998 8.00003Z"
-                    fill="white"
-                  />
-                </svg>
-              </i>
-            </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
-              <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
-              </div>
-              <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="young-accordions"
-          class="pt-10 max-w-[1080px] mx-auto flex flex-wrap gap-y-2.5 gap-x-5 items-baseline"
-        >
+          
           <div
             class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
           >
@@ -963,135 +966,6 @@
               class="w-full flex items-center justify-between cursor-pointer"
               for="accordion-item-5"
             >
-              <span class="text-lg font-medium">young Терапія</span>
-              <i
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.7998 8.00003C10.7998 8.1279 10.751 8.2559 10.6533 8.35353L5.65334 13.3535C5.45796 13.5489 5.14159 13.5489 4.94634 13.3535C4.75109 13.1582 4.75096 12.8418 4.94634 12.6465L9.59284 8.00003L4.94634 3.35353C4.75096 3.15815 4.75096 2.84178 4.94634 2.64653C5.14171 2.45128 5.45809 2.45115 5.65334 2.64653L10.6533 7.64653C10.751 7.74415 10.7998 7.87215 10.7998 8.00003Z"
-                    fill="white"
-                  />
-                </svg>
-              </i>
-            </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
-              <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
-              </div>
-              <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
-          >
-            <input type="checkbox" class="hidden" id="accordion-item-6" />
-            <label
-              class="w-full flex items-center justify-between cursor-pointer"
-              for="accordion-item-6"
-            >
-              <span class="text-lg font-medium">Гігієна порожнини рота</span>
-              <i
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.7998 8.00003C10.7998 8.1279 10.751 8.2559 10.6533 8.35353L5.65334 13.3535C5.45796 13.5489 5.14159 13.5489 4.94634 13.3535C4.75109 13.1582 4.75096 12.8418 4.94634 12.6465L9.59284 8.00003L4.94634 3.35353C4.75096 3.15815 4.75096 2.84178 4.94634 2.64653C5.14171 2.45128 5.45809 2.45115 5.65334 2.64653L10.6533 7.64653C10.751 7.74415 10.7998 7.87215 10.7998 8.00003Z"
-                    fill="white"
-                  />
-                </svg>
-              </i>
-            </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
-              <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
-              </div>
-              <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
-          >
-            <input type="checkbox" class="hidden" id="accordion-item-7" />
-            <label
-              class="w-full flex items-center justify-between cursor-pointer"
-              for="accordion-item-7"
-            >
-              <span class="text-lg font-medium">Хірургія</span>
-              <i
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.7998 8.00003C10.7998 8.1279 10.751 8.2559 10.6533 8.35353L5.65334 13.3535C5.45796 13.5489 5.14159 13.5489 4.94634 13.3535C4.75109 13.1582 4.75096 12.8418 4.94634 12.6465L9.59284 8.00003L4.94634 3.35353C4.75096 3.15815 4.75096 2.84178 4.94634 2.64653C5.14171 2.45128 5.45809 2.45115 5.65334 2.64653L10.6533 7.64653C10.751 7.74415 10.7998 7.87215 10.7998 8.00003Z"
-                    fill="white"
-                  />
-                </svg>
-              </i>
-            </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
-              <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
-              </div>
-              <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full bg-card p-2.5 pl-[30px] lg:max-w-[calc(50%-10px)] accordion-item"
-          >
-            <input type="checkbox" class="hidden" id="accordion-item-8" />
-            <label
-              class="w-full flex items-center justify-between cursor-pointer"
-              for="accordion-item-8"
-            >
               <span class="text-lg font-medium">Ортодонтія</span>
               <i
                 class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-light hover:shadow-primary transition-all"
@@ -1110,24 +984,51 @@
                 </svg>
               </i>
             </label>
-            <div class="py-5 space-y-2.5 pr-5 accordion-content">
-              <div class="flex items-end">
-                <span class="mr-2">Профгігієна порожнини рота</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1200 грн.</span>
+            <div class="price py-5 space-y-2.5 pr-5 accordion-content">
+             <div class="flex items-end">
+                <span class="mr-2">Корекція брекет-систем</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 200 грн</span>
               </div>
               <div class="flex items-end">
-                <span class="mr-2">Ультразвукове чищення</span>
-                <i
-                  class="block flex-grow border-t h-[9px] border-dashed border-primary"
-                ></i>
-                <span class="ml-1">1900 грн.</span>
+                <span class="mr-2">Знімна корегуюча пластинка</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">2 600 грн</span>
               </div>
-            </div>
+              <div class="flex items-end">
+                <span class="mr-2">Незнімний дитячий апарат</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">4 900 грн</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Металеві брекети</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 14 500 грн</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Сапфірові брекети</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 19 000 грн</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Комбіновані брекети</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 17 500 грн</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Самолігуючі брекети</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 20 000 грн</span>
+              </div>
+              <div class="flex items-end">
+                <span class="mr-2">Керамічні брекети</span>
+                <i class="block flex-grow border-t h-[9px] border-dashed border-primary"></i>
+                <span class="ml-1">від 19 000 грн</span>
+              </div>
+              </div>
           </div>
         </div>
+        
       </section>
       <section class="pb-10 md:pb-[50px] max-w-container lg:!px-[180px]">
         <div
@@ -1160,9 +1061,9 @@
             ></div>
             <div class="md:py-[25px] w-full text-center md:text-left">
               <strong class="text-primary text-[44px] font-medium"
-                >800 грн.
+                >1 100 грн.
                 <s class="text-sm font-normal text-secondary-text"
-                  >1200 грн.</s
+                  >1 500 грн.</s
                 ></strong
               >
               <div class="text-sm text-center mt-[30px] mb-2.5">
@@ -1181,6 +1082,11 @@
           </div>
         </div>
       </section>
+        <style>
+            #specialists {
+                display: none;
+            }
+        </style>
       <section
         id="specialists"
         data-selected="1"
@@ -1528,12 +1434,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
                     src="./assets/images/feedback/user-1.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Анна</span>
                     <span class="text-sm text-primary">29 років</span>
@@ -1568,12 +1474,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-2.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Максим</span>
                     <span class="text-sm text-primary">24 роки</span>
@@ -1605,12 +1511,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                    <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-3.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Олеся</span>
                     <span class="text-sm text-primary">22 роки</span>
@@ -1642,15 +1548,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-4.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Ангеліна</span>
-                    <span class="text-sm text-primary">28 років</span>
+                    <span class="font-display text-base">Марина</span>
+                    <span class="text-sm text-primary">27 років</span>
                   </div>
                 </div>
               </div>
@@ -1679,12 +1585,12 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-5.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Вікторія</span>
                     <span class="text-sm text-primary">24 роки</span>
@@ -1717,15 +1623,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-6.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
                     <span class="font-display text-base">Наталія</span>
-                    <span class="text-sm text-primary">32 роки</span>
+                    <span class="text-sm text-primary">24 роки</span>
                   </div>
                 </div>
               </div>
@@ -1755,15 +1661,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-7.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Оля Кулик</span>
-                    <span class="text-sm text-primary">34 роки</span>
+                    <span class="font-display text-base">Оля</span>
+                    <span class="text-sm text-primary">32 роки</span>
                   </div>
                 </div>
               </div>
@@ -1793,15 +1699,15 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-8.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Наталя</span>
-                    <span class="text-sm text-primary">27 років</span>
+                    <span class="font-display text-base">Ксенія</span>
+                    <span class="text-sm text-primary">20 років</span>
                   </div>
                 </div>
               </div>
@@ -1834,14 +1740,14 @@
                   </p>
                 </div>
                 <div class="flex items-center gap-2.5">
-                  <!--<img
+                  <img
                     class="max-w-[60px] block"
                     loading="lazy"
-                    src="./assets/images/feedback/user-1.png"
+                    src="./assets/images/feedback/user-9.png"
                     alt="user 1"
-                  />-->
+                  />
                   <div class="space-y-[5px] flex flex-col text-start">
-                    <span class="font-display text-base">Віта Олещук</span>
+                    <span class="font-display text-base">Віта</span>
                     <span class="text-sm text-primary">32 роки</span>
                   </div>
                 </div>
@@ -2933,5 +2839,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
     <script src="./dialog.js"></script>
+    
   </body>
 </html>

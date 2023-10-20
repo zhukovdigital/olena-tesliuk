@@ -215,3 +215,5 @@ button[type="submit"]:has(> .spinner) {
 .spinner > svg {
   @apply animate-spin text-white;
 }
+
+

@@ -4145,6 +4145,11 @@ button[type="submit"]:has(> .spinner) {
     padding: 50px;
   }
 
+  .md\:\!px-\[50px\] {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -4569,4 +4574,17 @@ button[type="submit"]:has(> .spinner) {
   .xl\:text-left {
     text-align: left;
   }
+}
+
+ @media only screen and (max-width: 767px) {
+    .price .flex {
+        flex-wrap: wrap;
+    }
+    .price i {
+        display: none;
+    }
+     .price  .ml-1 {
+         font-weight: 500;
+         margin: 0;
+     }
 }
