@@ -154,3 +154,9 @@ function getRandomNumber() {
   const randomNumber = Math.floor(random % 10) + 5;
   return randomNumber;
 }
+
+
+const container = document.querySelector('.comparison-container');
+document.querySelector('.comparison-slider').addEventListener('input', (e) => {
+  container.style.setProperty('--position', `${e.target.value}%`);
+})
