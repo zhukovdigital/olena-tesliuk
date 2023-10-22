@@ -237,7 +237,7 @@
             >
                 Красива посмішка — мрія кожного. 
             </p>
-            <div class="mt-[30px] md:mt-[40px] mx-3 md:mx-0 ">
+            <div class="mt-[30px] md:mt-[40px] ">
               <button
                 class="open-short-dialog btn-primary text-white w-192"
                 data-label="Художня реставрація зубів - Записатись на прийом"
@@ -407,52 +407,35 @@
         </h2>
         <div class="comparison-container">
         <div class=" comparison-image-container">
-
-          <picture>
-            <source
-                srcset="./assets/images/result-before-mobile.png"
-                media="(max-width: 767px)"
-            />
-            <source
-                srcset="./assets/images/result-before-tablet.png"
-                media="(max-width: 1439px)"
-            />
+          <div class="comparison-container-before">
+          <div class="wrapper-image-before relative">
             <img
                 loading="lazy"
-                src="./assets/images/result-before.png"
+                src="./assets/images/result-before-2.png"
                 class="comparison-slider-image comparison-image-before"
                 alt="before"
               />
-          </picture>
-            <picture>
-              <source
-                  srcset="./assets/images/result-after-mobile.png"
-                  media="(max-width: 767px)"
-              />
-              <source
-                  srcset="./assets/images/result-after-tablet.png"
-                  media="(max-width: 1439px)"
-              />
+            </div>
+        </div>
               <img
                 loading="lazy"
-                src="./assets/images/result-after.png"
+                src="./assets/images/result-after-2.png"
                 class="comparison-slider-image comparison-image-after"
                 alt="after"
               />
-            </picture>
             <input 
               class="comparison-slider" 
               type="range" 
-              min="50" 
+              min="0" 
               max="100" 
               value="50" 
               aria-label="Percentage of before photo shown">
             <div class="comparison-slider-line" aria-hidden="true"></div>
             <div class="comparison-slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <svg class="w-[10px] h-[10px] md:w-[16px] md:h-[16px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M5.20016 7.99997C5.20016 8.12784 5.24904 8.25584 5.34666 8.35347L10.3467 13.3535C10.542 13.5488 10.8584 13.5488 11.0537 13.3535C11.2489 13.1581 11.249 12.8417 11.0537 12.6465L6.40716 7.99997L11.0537 3.35347C11.249 3.15809 11.249 2.84172 11.0537 2.64647C10.8583 2.45122 10.5419 2.45109 10.3467 2.64647L5.34666 7.64647C5.24904 7.74409 5.20016 7.87209 5.20016 7.99997Z" fill="#E1CB95"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg class="w-[10px] h-[10px] md:w-[16px] md:h-[16px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M10.7998 7.99997C10.7998 8.12784 10.751 8.25584 10.6533 8.35347L5.65334 13.3535C5.45796 13.5488 5.14159 13.5488 4.94634 13.3535C4.75109 13.1581 4.75096 12.8417 4.94634 12.6465L9.59284 7.99997L4.94634 3.35347C4.75096 3.15809 4.75096 2.84172 4.94634 2.64647C5.14171 2.45122 5.45809 2.45109 5.65334 2.64647L10.6533 7.64647C10.751 7.74409 10.7998 7.87209 10.7998 7.99997Z" fill="#E1CB95"/>
                   </svg>
             </div>
@@ -493,10 +476,10 @@
                 Записатися на консультацію
                 </button>
                 <div
-                class="py-3 px-5 border border-dashed border-primary-light h-[60px] rounded-[53px] text-sm"
+                class="py-3 px-5 border border-dashed border-primary-light h-[60px] rounded-[53px] text-sm text-center md:text-left"
                 >
                 <span class="text-primary">Сьогодні записалися:</span><br />
-                <span class="how-much-scheduled font-medium">0 людей</span>
+                <p class="how-much-scheduled font-medium">0 людей</p>
                 </div>
             </div>
             </div>

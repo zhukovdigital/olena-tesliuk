@@ -1,63 +1,27 @@
-const howMuchScheduledList = document.querySelectorAll(".how-much-scheduled");
-const howMuchAvailable = document.getElementById("how-much-available");
-const specialists = document.getElementById("specialists");
-const currentMonth = document.getElementById("current-month");
-const specialist1 = specialists.querySelector(
-  'button[data-select-specialist="1"]'
-);
-const specialist2 = specialists.querySelector(
-  'button[data-select-specialist="2"]'
-);
-const specialist3 = specialists.querySelector(
-  'button[data-select-specialist="3"]'
-);
+const howMuchScheduledList = document.querySelector(".how-much-scheduled");
+const submitAddPeople = document.getElementById("submit-short-form");
 
-specialists.addEventListener("click", (event) => {
-  let selected;
-
-  if (specialist1.contains(event.target)) {
-    selected = specialist1;
-  }
-  if (specialist2.contains(event.target)) {
-    selected = specialist2;
-  }
-  if (specialist3.contains(event.target)) {
-    selected = specialist3;
-  }
-
-  if (selected) {
-    event.currentTarget.dataset.selected = selected.dataset.selectSpecialist;
-  }
-});
+let scheduledPeople = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const months = [
-    "січня",
-    "лютого",
-    "березня",
-    "квітня",
-    "травня",
-    "червня",
-    "липня",
-    "серпня",
-    "вересня",
-    "жовтня",
-    "листопада",
-    "грудня",
-  ];
-  const date = new Date();
   const rand = getRandomNumber();
-
-  for (const howMuchScheduled of howMuchScheduledList) {
-    howMuchScheduled.innerText = `${rand} людей`;
-    howMuchAvailable.innerText = 16 - rand;
-  }
-
-  currentMonth.innerText = months[date.getMonth()];
+ 
+  scheduledPeople = rand;
+  console.log(scheduledPeople);
+  howMuchScheduledList.innerText = scheduledPeople
 });
 
 
-// 
+submitAddPeople.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  scheduledPeople += 1;
+
+  howMuchScheduledList.innerHTML = `${scheduledPeople} людей`
+  
+});
+
+
 const swiperCarousel = new Swiper(".our-work-carousel", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -73,7 +37,6 @@ const swiperCarousel = new Swiper(".our-work-carousel", {
     },
   });
 
-
   document.querySelectorAll(".our-work-carousel-next").forEach((element) => {
     element.addEventListener("click", () => {
       swiperCarousel.slideNext();
@@ -83,8 +46,7 @@ const swiperCarousel = new Swiper(".our-work-carousel", {
     element.addEventListener("click", () => {
       swiperCarousel.slidePrev();
     });
-  });
-//   
+  }); 
 
 new Swiper(".guarantee", {
   slidesPerView: 1,
