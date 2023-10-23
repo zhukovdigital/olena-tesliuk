@@ -160,7 +160,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
 function getRandomNumber() {
   const date = new Date();
-  const seed = +`${date.getFullYear()}${date.getMonth() + 1}-${date.getDate()}`
+  const seed = +`${date.getFullYear()}${date.getMonth() + 1}-${date.getHours()}`
     .split("")
     .map((el) => el.charCodeAt())
     .join("");

@@ -1,5 +1,7 @@
 const howMuchScheduledList = document.querySelector(".how-much-scheduled");
 const submitAddPeople = document.getElementById("submit-short-form");
+const container = document.querySelector('.comparison-container');
+const beforeImageContainer = document.querySelector('.wrapper-image-before')
 
 let scheduledPeople = 0;
 
@@ -7,8 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const rand = getRandomNumber();
  
   scheduledPeople = rand;
-  console.log(scheduledPeople);
-  howMuchScheduledList.innerText = scheduledPeople
+  howMuchScheduledList.innerText = `${scheduledPeople} людей`
+
+  beforeImageContainer.style.width = container.offsetWidth + 'px'
+
+});
+
+visualViewport.addEventListener("resize", (e) => {
+  beforeImageContainer.style.width = container.offsetWidth + 'px'
 });
 
 
@@ -16,9 +24,7 @@ submitAddPeople.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   scheduledPeople += 1;
-
   howMuchScheduledList.innerHTML = `${scheduledPeople} людей`
-  
 });
 
 
@@ -108,7 +114,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
 function getRandomNumber() {
   const date = new Date();
-  const seed = +`${date.getFullYear()}${date.getMonth() + 1}-${date.getDate()}`
+  const seed = +`${date.getFullYear()}${date.getMonth() + 1}-${date.getHours()}`
     .split("")
     .map((el) => el.charCodeAt())
     .join("");
@@ -117,8 +123,6 @@ function getRandomNumber() {
   return randomNumber;
 }
 
-
-const container = document.querySelector('.comparison-container');
 document.querySelector('.comparison-slider').addEventListener('input', (e) => {
   container.style.setProperty('--position', `${e.target.value}%`);
 })

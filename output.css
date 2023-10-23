@@ -3715,7 +3715,7 @@ button[type="submit"]:has(> .spinner) {
 }
 
 .comparison-container {
-  width: 335px;
+  width: 100%;
   height: 200px;
   margin: 0 auto;
   position: relative;
@@ -3744,30 +3744,28 @@ button[type="submit"]:has(> .spinner) {
 }
 
 .wrapper-image-before {
-  width: 335px;
   height: 200px;
 }
 
 @media (min-width: 767px) {
   .comparison-container {
-    width: 628px;
+    width: 100%;
     height: 350px;
   }
 
   .wrapper-image-before {
-    width: 628px;
     height: 350px;
   }
 }
 
 @media (min-width: 1440px) {
-  .comparison-container  {
+  /* .comparison-container  {
     width: 1080px;
   }
 
   .wrapper-image-before {
     width: 1080px;
-  }
+  } */
 }
 
 .comparison-slider-image {
