@@ -436,68 +436,28 @@
         <div
           class="flex flex-wrap xl:flex-nowrap gap-2.5 md:gap-5 w-full items-stretch"
         >
-          <div
-            class="w-full bg-card rounded-[10px] pl-[30px] md:pr-[42px] pt-[23px] flex justify-between relative overflow-hidden"
+        <div
+            class="w-full bg-card rounded-[10px] md:max-w-[calc(50%-10px)] h-[400px] xl:max-w-[310px] relative overflow-hidden px-[30px] py-[30px]"
           >
-            <div
-              class="flex flex-col justify-between pt-[7px] pb-[30px] relative z-10"
-            >
+            <div class="space-y-[15px] flex flex-col justify-between h-[100%]">
               <div>
-                <h3 class="text-2xl font-medium mb-[15px] max-w-[193px]">
+                <h3 class="text-2xl font-medium max-w-[193px]">
                   Дитяча стоматологія
                 </h3>
-                <p class="text-sm text-secondary-text max-w-[222px]">
-                  Лікування зубів наймолодших пацієнтів – швидко, безболісно та
-                  з подарунками
+                <p class="text-sm text-secondary-text">
+                  Лікування зубів наймолодших пацієнтів – швидко, безболісно та з подарунками
                 </p>
               </div>
-              <div class="flex gap-2.5 mt-[150px] md:mt-0">
+              <div class="flex justify-between gap-2 z-10">
                 <button
-                  class="open-short-dialog btn-primary text-white !pt-[15px] !pb-[13px] h-[50px]"
-                  data-label="Головна - Записати дитину на прийом"
-                >
-                  Записати дитину на прийом
-                </button>
-                <a
-                  href="./dytiacha-stomatologija.html"
-                  class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary"
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.25 10C16.25 10.1599 16.1889 10.3199 16.0669 10.4419L9.81691 16.6919C9.57269 16.9361 9.17723 16.9361 8.93316 16.6919C8.6891 16.4477 8.68895 16.0522 8.93316 15.8081L14.7413 10L8.93316 4.1919C8.68894 3.94768 8.68894 3.55221 8.93316 3.30815C9.17738 3.06408 9.57285 3.06393 9.81691 3.30815L16.0669 9.55815C16.1889 9.68018 16.25 9.84018 16.25 10ZM11.0669 9.55815L4.81691 3.30815C4.57269 3.06393 4.17723 3.06393 3.93316 3.30815C3.6891 3.55237 3.68894 3.94783 3.93316 4.1919L9.74129 10L3.93316 15.8081C3.68895 16.0524 3.68895 16.4478 3.93316 16.6919C4.17738 16.936 4.57285 16.9361 4.81691 16.6919L11.0669 10.4419C11.1889 10.3199 11.25 10.1599 11.25 10C11.25 9.84018 11.1889 9.68018 11.0669 9.55815Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <img
-              loading="lazy"
-              class="max-w-[182px] md:max-w-[268px] w-full md:static absolute bottom-0 right-0"
-              src="./assets/images/boy.png"
-              alt="boy"
-            />
-          </div>
-          <div
-            class="w-full bg-card rounded-[10px] md:max-w-[calc(50%-10px)] h-[290px] md:h-[400px] xl:h-auto xl:max-w-[310px] flex flex-col justify-between relative overflow-hidden"
-          >
-            <div class="space-y-[15px] p-[30px]">
-              <h3 class="text-2xl font-medium max-w-[193px]">
-                Доросла стоматологія
-              </h3>
-              <p class="text-sm text-secondary-text">
-                Лікування карієсу, протезування, встановлення імплантів,
-                реставрація та вініри.
-              </p>
+              class="open-short-dialog btn-primary text-white !pt-[15px] !pb-[13px] h-[50px]"
+              data-label="Головна - Записати дитину на прийом"
+              >
+              Записати дитину на прийом
+              </button>
               <a
-                href="./index.html"
-                class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary absolute left-5 md:left-auto md:right-5 bottom-5 z-10"
+                href="./dytiacha-stomatologija.html"
+                class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary left-5 md:left-auto md:right-5 bottom-5 z-10 md:hidden"
               >
                 <svg
                   width="20"
@@ -512,7 +472,52 @@
                   />
                 </svg>
               </a>
+              </div>
+              
             </div>
+            <img
+              loading="lazy"
+              class="w-[182px] h-auto absolute bottom-0 right-[10px] md:hidden"
+              src="./assets/images/child.png"
+              alt="child"
+            />
+            <img
+              loading="lazy"
+              class="w-[182px] h-auto absolute bottom-0 right-[10px] md:right-0 hidden md:block"
+              src="./assets/images/child-tablet.png"
+              alt="child"
+            />
+          </div>
+          <div
+            class="w-full bg-card rounded-[10px] md:max-w-[calc(50%-10px)] h-[290px] md:h-[400px] xl:h-auto xl:max-w-[310px] flex flex-col justify-between relative overflow-hidden p-[30px]"
+          >
+            <div class="space-y-[15px] z-10">
+              <h3 class="text-2xl font-medium max-w-[193px]">
+                Доросла стоматологія
+              </h3>
+              <p class="text-sm text-secondary-text">
+                Лікування карієсу, протезування, встановлення імплантів,
+                реставрація та вініри.
+              </p>
+            </div>
+              <a
+                href="./index.html"
+                class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary md:absolute  left-5 md:left-auto md:right-5 bottom-5 z-10"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.25 10C16.25 10.1599 16.1889 10.3199 16.0669 10.4419L9.81691 16.6919C9.57269 16.9361 9.17723 16.9361 8.93316 16.6919C8.6891 16.4477 8.68895 16.0522 8.93316 15.8081L14.7413 10L8.93316 4.1919C8.68894 3.94768 8.68894 3.55221 8.93316 3.30815C9.17738 3.06408 9.57285 3.06393 9.81691 3.30815L16.0669 9.55815C16.1889 9.68018 16.25 9.84018 16.25 10ZM11.0669 9.55815L4.81691 3.30815C4.57269 3.06393 4.17723 3.06393 3.93316 3.30815C3.6891 3.55237 3.68894 3.94783 3.93316 4.1919L9.74129 10L3.93316 15.8081C3.68895 16.0524 3.68895 16.4478 3.93316 16.6919C4.17738 16.936 4.57285 16.9361 4.81691 16.6919L11.0669 10.4419C11.1889 10.3199 11.25 10.1599 11.25 10C11.25 9.84018 11.1889 9.68018 11.0669 9.55815Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            
             <img
               loading="lazy"
               class="w-full h-auto absolute bottom-0 left-0 hidden md:block"
@@ -527,17 +532,18 @@
             />
           </div>
           <div
-            class="w-full bg-card rounded-[10px] md:max-w-[calc(50%-10px)] h-[290px] md:h-[400px] xl:h-auto xl:max-w-[310px] flex flex-col justify-between relative overflow-hidden"
+            class="w-full bg-card rounded-[10px] md:max-w-[calc(50%-10px)] h-[290px] md:h-[400px] xl:h-auto xl:max-w-[310px] flex flex-col justify-between relative overflow-hidden p-[30px]"
           >
-            <div class="space-y-[15px] p-[30px]">
+            <div class="space-y-[15px] z-10">
               <h3 class="text-2xl font-medium max-w-[193px]">Ортодонтія</h3>
               <p class="text-sm text-secondary-text">
                 Виготовлення індивідуальних пластинок та апаратів, встановлення
                 брекетів, елайнерів.
               </p>
+            </div>
               <a
                 href="./ortodontija.html"
-                class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary absolute left-5 md:left-auto md:right-5 bottom-5 z-10"
+                class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary md:absolute left-5 md:left-auto md:right-5 bottom-5 z-10"
               >
                 <svg
                   width="20"
@@ -552,10 +558,10 @@
                   />
                 </svg>
               </a>
-            </div>
+            
             <img
               loading="lazy"
-              class="w-full h-auto absolute bottom-0 left-0 hidden md:block"
+              class="w-[406px] h-auto absolute bottom-0 right-0 hidden md:block"
               src="./assets/images/retainer.png"
               alt="retainer"
             />
@@ -566,6 +572,48 @@
               alt="implant"
             />
           </div>
+          <div
+          class="w-full bg-card rounded-[10px] md:max-w-[calc(50%-10px)] h-[290px] md:h-[400px] xl:h-auto xl:max-w-[310px] flex flex-col justify-between relative overflow-hidden p-[30px]"
+        >
+          <div class="space-y-[15px] z-10">
+            <h3 class="text-2xl font-medium ">
+              Художня реставрація
+            </h3>
+            <p class="text-sm text-secondary-text">
+              Виготовлення індивідуальних пластинок та апаратів, встановлення брекетів, елайнерів.
+            </p>
+          </div>
+            <a
+              href="./artistic-restoration.html"
+              class="flex items-center justify-center w-[50px] h-[50px] bg-primary-light rounded-full transition-shadow hover:shadow-primary  md:absolute left-5 md:left-auto md:right-5 bottom-5 z-10"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.25 10C16.25 10.1599 16.1889 10.3199 16.0669 10.4419L9.81691 16.6919C9.57269 16.9361 9.17723 16.9361 8.93316 16.6919C8.6891 16.4477 8.68895 16.0522 8.93316 15.8081L14.7413 10L8.93316 4.1919C8.68894 3.94768 8.68894 3.55221 8.93316 3.30815C9.17738 3.06408 9.57285 3.06393 9.81691 3.30815L16.0669 9.55815C16.1889 9.68018 16.25 9.84018 16.25 10ZM11.0669 9.55815L4.81691 3.30815C4.57269 3.06393 4.17723 3.06393 3.93316 3.30815C3.6891 3.55237 3.68894 3.94783 3.93316 4.1919L9.74129 10L3.93316 15.8081C3.68895 16.0524 3.68895 16.4478 3.93316 16.6919C4.17738 16.936 4.57285 16.9361 4.81691 16.6919L11.0669 10.4419C11.1889 10.3199 11.25 10.1599 11.25 10C11.25 9.84018 11.1889 9.68018 11.0669 9.55815Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          
+          <img
+            loading="lazy"
+            class="w-[341px] h-auto absolute bottom-0 right-0 hidden md:block"
+            src="./assets/images/restoration-tablet.png"
+            alt="implant"
+          />
+          <img
+            loading="lazy"
+            class="w-[254px] h-auto absolute max-w-[230px] bottom-0 right-0 block md:hidden"
+            src="./assets/images/restoration.png"
+            alt="implant"
+          />
+        </div>
         </div>
       </section>
       <section
